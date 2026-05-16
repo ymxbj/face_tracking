@@ -4,6 +4,7 @@ dist/
 *.egg-info/
 __pycache__/
 *.pyc
+push.sh
 
 # Virtualenvs
 .venv/

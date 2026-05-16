@@ -15,7 +15,7 @@ by running `python3 scripts/track_video.py --video data/test.mp4 --output-dir re
 
 ![Keypoint visualisation](results/test/vis_kp.gif)
 
-Given a video and pre-computed 2D facial landmarks, it produces:
+Given a portrait video, it produces:
 
 - per-frame FLAME shape / expression / pose / camera parameters
 - per-frame canonical / expression / projected 3D keypoints

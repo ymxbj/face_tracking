@@ -1,0 +1,37 @@
+# Install this file with:  pip install -r requirements.txt
+#
+# PyTorch + ecosystem packages (torch / torchvision / pytorch3d /
+# nvdiffrast / triton) MUST be installed manually first because the
+# correct wheel depends on the host's CUDA version. See README.
+
+# --- Core scientific stack -------------------------------------------------
+numpy
+opencv-python
+Pillow
+tqdm
+
+# --- I/O & video ----------------------------------------------------------
+mediapy
+moviepy
+trimesh
+scikit-image          # used to load the eye-mask PNG in the renderer
+imageio               # transitive but explicit (used by mediapy / moviepy)
+
+# --- Configuration --------------------------------------------------------
+omegaconf
+
+# --- Deep-learning frameworks (NOT including torch — install separately) --
+pytorch_lightning
+einops
+timm
+safetensors          # timm needs this to read the DINO backbone
+
+# --- Pixel3DMM tracker helpers -------------------------------------------
+dreifus
+
+# --- Face cropping + 203-pt landmark (auto-detect mode) ------------------
+insightface
+onnxruntime          # swap to `onnxruntime-gpu` on a CUDA box for GPU inference
+
+# --- Download utility ----------------------------------------------------
+gdown

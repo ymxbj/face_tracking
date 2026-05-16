@@ -1,0 +1,24 @@
+# Build artefacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated data
+preprocessed_data/
+tracking_output/
+pretrained_weights/
+
+# IDE
+.idea/
+.vscode/

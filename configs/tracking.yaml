@@ -1,0 +1,107 @@
+config_name : test
+
+batch_size : 16 # batch size used during joint optimization stage, when your video has less frames than batch_size the script will crash currently
+num_views : 1
+size : 512 # defines the rendering resolution, you could also try 512
+image_size : [512, 512] # make sure to update this accordingly, sorry for the redundancy
+
+data_folder : none
+p3dmm_folder : none
+
+extra_cam_steps : False
+big_normal_mask : False
+
+start_frame : 0
+
+num_shape_params : 300
+num_exp_params : 100
+tex_params : 140
+# iter: Number if iterations in first stage of tracking. For single-image fitting, you might want to choose a larger value, e.g. 500 or 800
+iters : 500
+global_iters : 5000 # Number f iterations for second stage of tracking (video only)
+
+
+no_lm : False  # disable all landmark losses (only eye and mouth landmarks are used)
+use_eyebrows : False # not sure if used
+use_mouth_lmk : True # toggle use of mouth landmarks
+no_pho : True # unused
+no_sh : True # unused
+disable_edge : False # unused
+
+keyframes : [] # unused
+
+ignore_mica : True # unused
+flame2023 : False # unused
+
+normal_super : 1000.0 # weight for normal loss
+normal_super_can : 0.0 # unused
+sil_super : 500 # weight for silhouette loss
+
+occ_filter : True
+
+# learning rates for different optimizable parameters
+lr_id : 0.002 #0.003 #0.006 #0.003
+lr_exp : 0.005 # 0.005 #0.01 #0.01 #0.005
+lr_jaw : 0.005 #0.003
+lr_neck : 0.001 #0.0005
+lr_R : 0.005 #0.005 #0.002 #0.01# 0.0001
+lr_t : 0.001 #0.002 #0.001 #0.0005 #0.0005
+lr_f : 0.1 #0.05 #0.01 #0.001
+lr_pp : 0.00005
+
+# some loss weights
+w_pho : 150 # unused
+w_lmks : 3000 # weight for eye landmarks
+w_lmks_mouth : 3000  # weight for mouth landmarks
+w_lmks_eyebrow: 3000   # weight for eyebrow landmarks
+w_lmks_eyes: 3000    # weight for eyes landmarks
+w_lmks_iris: 3000    # weight for iris landmarks
+w_lmks_nose: 3000   # weight for nose landmarks
+w_lmks_contour: 3000    # weight for face contour landmarks
+w_lmks_lid : 1000 # weightr for eye closure loss
+w_lmks_oval : 2000 # unused
+w_lmks_star : 0 # unused
+
+include_neck : True # whether to optimize for neck or not
+
+# regualization weights for different optimizable parameters
+w_shape :  0.2
+w_shape_general : 0.05
+w_exp : 0.05
+w_jaw : 0.01
+w_neck : 0.1
+
+n_fine : False # unused
+low_overhead : False # unused
+
+delta_n : 0.33 # threshold that determines above which loss pixels in the normal loss map are considered outliers
+
+global_camera : True 
+
+# smoothness loss weights 
+reg_smooth_exp : 50.0
+reg_smooth_eyes : 10.0
+reg_smooth_eyelids : 2.0
+reg_smooth_jaw : 50.0
+reg_smooth_neck : 1000.0
+reg_smooth_R : 2000.0
+reg_smooth_t : 15200.0
+reg_smooth_pp : 420.0
+reg_smooth_fl : 420.0
+
+reg_smooth_mult : 1.0
+
+normal_l2 : False
+smooth : True
+normal_mask_ksize : 13
+
+early_stopping : True
+
+# early_stopping_delta : 0.05  # a higher value will make stage 1 tracking faster but less accurate
+early_stopping_delta : 0.05
+
+early_exit : False
+
+save_landmarks : False
+
+delete_preprocessing : False

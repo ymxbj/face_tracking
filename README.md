@@ -9,11 +9,11 @@ by running `python3 scripts/track_video.py --video data/test.mp4 --output-dir re
 
 **Result of face tracking**
 
-<video src="results/test/result.mp4" controls muted loop width="100%"></video>
+![Result of face tracking](results/test/result.gif)
 
 **Keypoint visualisation**
 
-<video src="results/test/vis_kp.mp4" controls muted loop width="100%"></video>
+![Keypoint visualisation](results/test/vis_kp.gif)
 
 Given a video and pre-computed 2D facial landmarks, it produces:
 

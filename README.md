@@ -86,7 +86,7 @@ This single command downloads every checkpoint the tracker needs:
 | `swin_b-68c6b09e.pth` | torchvision Swin-B backbone (used by SegFace) |
 | `vit_base_patch16_224.dino.safetensors` | DINO ViT backbone (used by Pixel3DMM) |
 | `FLAME2020/generic_model.pkl` | [FLAME](https://flame.is.tue.mpg.de/) 2020 generic model |
-| `landmark.onnx` | [LivePortrait](https://github.com/KwaiVGI/LivePortrait) — 203-pt face landmark refiner (auto-detect mode only) |
+| `landmark.onnx` | [LivePortrait](https://github.com/KwaiVGI/LivePortrait) — 203-points face landmark refiner (auto-detect mode only) |
 | `insightface/models/buffalo_l/` | [InsightFace](https://github.com/deepinsight/insightface) — RetinaFace detector + 2d-106 landmarks (auto-detect mode only). Downloaded as a zip and unpacked automatically. |
 
 After running the script you'll have:
@@ -126,7 +126,7 @@ export FACE_TRACKING_PRETRAINED=/data/face_tracking/pretrained_weights
 
 ## Usage
 
-The pipeline runs in **auto-detect mode by default**: pass only a video and the bundled face-cropper (RetinaFace + a 203-pt ONNX landmark refiner, vendored from [LivePortrait](https://github.com/KwaiVGI/LivePortrait)) takes care of cropping and landmarking. If you already have your own landmarks, pass them and the cropper is skipped.
+The pipeline runs in **auto-detect mode by default**: pass only a video and the bundled face-cropper (RetinaFace + a 203-points ONNX landmark refiner, vendored from [LivePortrait](https://github.com/KwaiVGI/LivePortrait)) takes care of cropping and landmarking. If you already have your own landmarks, pass them and the cropper is skipped.
 
 ### Python API
 

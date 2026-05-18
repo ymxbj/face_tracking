@@ -415,6 +415,10 @@ If you find this code useful, please consider citing our paper or Pixel3DMM:
 }
 ```
 
+## Contact
+
+If you have any questions, please contact [xiongbojun@pku.edu.cn](mailto:xiongbojun@pku.edu.cn).
+
 ## License
 
 Code is released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (inherited from the upstream Pixel3DMM repository). See [LICENSE](LICENSE) for the full text. Note that **third-party assets (FLAME, SegFace, ...) carry their own licences** and are **not** redistributed here — you must obtain them from their original sources.

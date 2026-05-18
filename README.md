@@ -45,7 +45,7 @@ face_tracking/
 
 ## Installation
 
-Tested on Python 3.12, CUDA 12.8, PyTorch 2.11 with NVIDIA GPUs.
+Tested on Python 3.12, CUDA 12.8, PyTorch 2.11 with NVIDIA V100 GPUs.
 
 ```bash
 # 1. Create an environment

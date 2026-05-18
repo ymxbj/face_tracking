@@ -58,8 +58,8 @@ conda activate face_tracking
 pip3 install torch==2.11.0 torchvision==0.26.0 torchaudio==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 
 # 3. Install differentiable-rendering dependencies
-pip3 install "git+https://github.com/facebookresearch/pytorch3d.git"
-pip3 install "git+https://github.com/NVlabs/nvdiffrast.git"
+pip3 install "git+https://github.com/facebookresearch/pytorch3d.git" --no-build-isolation
+pip3 install "git+https://github.com/NVlabs/nvdiffrast.git" --no-build-isolation
 
 # 4. Install this package and its remaining deps
 pip3 install -r requirements.txt
